@@ -1,4 +1,4 @@
-import { Facebook, Instagram, LinkedIn, Twitter, YouTube } from '@mui/icons-material'
+import { Facebook, LinkedIn, Twitter, YouTube } from '@mui/icons-material'
 import { Box, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import { LISTS } from 'constant/contents'
 import React from 'react'

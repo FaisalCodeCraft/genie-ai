@@ -1,7 +1,5 @@
 import {
   CheckOutlined,
-  CloseOutlined,
-  DiamondOutlined,
 } from "@mui/icons-material";
 import {
   Box,

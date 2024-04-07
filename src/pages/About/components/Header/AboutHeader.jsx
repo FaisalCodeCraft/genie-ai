@@ -1,8 +1,5 @@
-import { ChevronRight } from '@mui/icons-material'
 import { Box, Container, Typography } from '@mui/material'
-import ButtonComp from 'components/Button/Button'
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const AboutHeader = () => {
   return (

@@ -1,4 +1,4 @@
-import { ArrowForward, ChevronLeft } from '@mui/icons-material'
+import { ArrowForward } from '@mui/icons-material'
 import { Box, Container, Grid, Link, Typography } from '@mui/material'
 import React from 'react'
 

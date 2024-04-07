@@ -21,18 +21,18 @@ const Navbar = () => {
   // console.log(cartLenght)
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [navShadow, setNavShadow] = React.useState(false);
-  const [bgColor, setBgColor] = React.useState(false)
-  const [color, setColor] = React.useState(false)
-
+  // const [bgColor, setBgColor] = React.useState(false)
+  // const [color, setColor] = React.useState(false)
+// 
   const changeBgColor = () => {
     if (window.scrollY >= 1) {
       setNavShadow(true);
-      setBgColor(true)
-      setColor(true)
+      // setBgColor(true)
+      // setColor(true)
     } else {
       setNavShadow(false);
-      setBgColor(false)
-      setColor(false)
+      // setBgColor(false)
+      // setColor(false)
     }
   };
 

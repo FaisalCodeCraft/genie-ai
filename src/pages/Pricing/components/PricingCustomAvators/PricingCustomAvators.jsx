@@ -36,6 +36,7 @@ const PricingCustomAvators = () => {
                                                 objectFit:'cover'
                                             }}
                                             src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStfmufEoKK2M4Tg2dctXg4x1IerYOoiNJe5Hy5KkxOczGVlQsU"
+                                            alt='Avater'
                                         />
                                     </Box >
                                     <Typography
@@ -64,6 +65,7 @@ const PricingCustomAvators = () => {
                                                 objectFit:'cover'
                                             }}
                                             src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQQHn5m61zKBaNWU703e6NL5Ddt0xaq0oTCI8GdgAUCrrikihRv'
+                                           alt=' avater'
                                         />
                                     </Box>
                                     <Typography

@@ -8,12 +8,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import SettingsIcon from "@mui/icons-material/Settings";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import ListItemButton from "@mui/material/ListItemButton";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { Avatar } from "@mui/material";
-import { Delete, Home, Person, VideoCall, VideoCameraBack } from "@mui/icons-material";
+import { Delete, Home, Person, VideoCameraBack } from "@mui/icons-material";
 // import { COLORS } from "constant/colors";
 
 

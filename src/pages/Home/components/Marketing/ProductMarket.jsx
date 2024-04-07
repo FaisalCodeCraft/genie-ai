@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Container, Grid, Link, Typography } from '@mui/material'
 import ButtonComp from '../../../../components/Button/Button'
-import { ArrowForward, ArrowRight } from '@mui/icons-material'
 
 
 const ProductMarket = () => {
