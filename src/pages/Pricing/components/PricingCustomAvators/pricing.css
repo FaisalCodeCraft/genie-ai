@@ -1,0 +1,19 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    
+
+  }
+  
+  .image {
+    opacity: 1;
+    transition: .5s ease;
+    display: block;
+    filter: brightness(70%);
+    
+
+  }
+  .container:hover .image {
+    transform: scale(1.2);
+    
+  }
