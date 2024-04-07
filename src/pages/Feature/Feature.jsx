@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from 'layout/Layout'
 import FeatureCards from './components/FeaturedCard/FeatureCards'
 import ArtToVideo from './components/ArtToVideo/ArtToVideo'
+import Layout from 'components/layout/Layout'
 
 const Feature = () => {
   return (

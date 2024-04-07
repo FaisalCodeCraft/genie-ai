@@ -6,8 +6,8 @@ import ProductQuality from './components/QualityProduct/ProductQuality'
 import CreateAvater from './components/CreateAvater/CreateAvater'
 import AiAvater from './components/AiAvater/AiAvater'
 import UseAvater from './components/UseAvater/UseAvater'
-import Layout from 'layout/Layout'
 import ReadyToBuilding from './components/ReadyToBuilding/ReadyToBuilding'
+import Layout from 'components/layout/Layout'
 
 const Home = () => {
   return (

@@ -1,6 +1,6 @@
-import Layout from 'layout/Layout'
 import React from 'react'
 import UseCaseHeader from './components/Header/UseCaseHeader'
+import Layout from 'components/layout/Layout'
 
 const UseCases = () => {
   return (

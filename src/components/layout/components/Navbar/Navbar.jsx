@@ -10,7 +10,7 @@ import Toolbar from "@mui/material/Toolbar";
 import { Divider, Link, Typography } from "@mui/material";
 import "./navbar.css"
 import { AccountCircleOutlined, LoginOutlined, PersonAddOutlined } from "@mui/icons-material";
-import ToggleMode from "../../../components/ToggleMode/ToggleMode";
+import ToggleMode from "components/ToggleMode/ToggleMode";
 // import { UseContext } from "../../../context";
 // import { COLORS } from "constants/contents/color";
 
