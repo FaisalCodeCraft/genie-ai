@@ -202,7 +202,7 @@ const Navbar = () => {
               <Box className="dropdownContentNavItem">
                 <ListItem >
                   <Link
-                    href="/pages/about/about"
+                    href="/about"
                     sx={{ color: "black", textDecoration: "none" }}
                   >
                     About Us
