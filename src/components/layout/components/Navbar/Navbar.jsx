@@ -23,7 +23,7 @@ const Navbar = () => {
   const [navShadow, setNavShadow] = React.useState(false);
   // const [bgColor, setBgColor] = React.useState(false)
   // const [color, setColor] = React.useState(false)
-// 
+  // 
   const changeBgColor = () => {
     if (window.scrollY >= 1) {
       setNavShadow(true);
@@ -79,11 +79,11 @@ const Navbar = () => {
             Resources
           </Link>
         </ListItem>
-          <ListItem >
-            <Link href="/Company" sx={{ color: "black", textDecoration: "none" }}>
-              Company
-            </Link>
-          </ListItem>
+        <ListItem >
+          <Link href="/Company" sx={{ color: "black", textDecoration: "none" }}>
+            Company
+          </Link>
+        </ListItem>
       </List>
     </Box>
   );
@@ -96,7 +96,11 @@ const Navbar = () => {
         boxShadow: navShadow ? "2px 0px 3px gray" : "none",
         transition: "all .3s ease"
       }}>
-        <Toolbar sx={{ display: "flex", justifyContent: { md: "space-around", sm: "space-between", xs: "space-between" }, alignItems: "center" }}>
+        <Toolbar sx={{
+          display: "flex",
+          justifyContent: { md: "space-around", sm: "space-between", xs: "space-between" },
+          alignItems: "center"
+        }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -163,12 +167,12 @@ const Navbar = () => {
 
             <List className="dropdown">
               <ListItem>
-                <Link
+                {/* <Link
                   href="/Resources"
                   sx={{ color: "black", textDecoration: "none" }}
-                >
-                  Resources
-                </Link>
+                > */}
+                Resources
+                {/* </Link> */}
               </ListItem>
               <Box className="dropdownContentNavItem">
                 <ListItem >
@@ -182,7 +186,7 @@ const Navbar = () => {
                 <Divider />
                 <ListItem >
                   <Link
-                    href="/Contact Us"
+                    href="/helpCenter"
                     sx={{ color: "black", textDecoration: "none" }}
                   >
                     Help Center
@@ -192,12 +196,12 @@ const Navbar = () => {
             </List>
             <List className="dropdown">
               <ListItem >
-                <Link
+                {/* <Link
                   href="/Company"
                   sx={{ color: "black", textDecoration: "none" }}
-                >
-                  Company
-                </Link>
+                > */}
+                Company
+                {/* </Link> */}
               </ListItem>
               <Box className="dropdownContentNavItem">
                 <ListItem >
@@ -219,17 +223,8 @@ const Navbar = () => {
                 </ListItem>
               </Box>
             </List>
-            {/* <ListItem>
-              <Link
-                href="#contact"
-                sx={{ color:"black", textDecoration: "none" }}
-              >
-                Contact
-              </Link>
-            </ListItem> */}
-            <Box>
-              <ToggleMode color={true} />
-            </Box>
+
+            <ToggleMode color={true} />
 
           </List>
           <List className="dropdown">
