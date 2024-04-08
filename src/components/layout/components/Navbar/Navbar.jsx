@@ -13,6 +13,7 @@ import { AccountCircleOutlined, LoginOutlined, PersonAddOutlined } from "@mui/ic
 import ToggleMode from "components/ToggleMode/ToggleMode";
 // import { UseContext } from "../../../context";
 // import { COLORS } from "constants/contents/color";
+import { useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -43,8 +44,7 @@ const Navbar = () => {
 
   const handleDrawerToggle = (_) => setMobileOpen((prevState) => !prevState);
 
-
-
+  const navigate = useNavigate()
 
 
   const drawer = (
@@ -142,8 +142,8 @@ const Navbar = () => {
 
             <ListItem>
               <Link
-                href="/Feature"
-                sx={{ color: "black", textDecoration: "none" }}
+                onClick={()=>navigate("/features")}
+                sx={{ color: "black", cursor:"pointer",textDecoration: "none" }}
               >
                 Features
               </Link>
