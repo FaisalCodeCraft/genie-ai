@@ -150,16 +150,16 @@ const Navbar = () => {
             </ListItem>
             <ListItem>
               <Link
-                href="/UseCases"
-                sx={{ color: "black", textDecoration: "none" }}
+                onClick={()=>navigate("/useCases")}
+                sx={{ color: "black", cursor:"pointer",textDecoration: "none" }}
               >
                 Use&nbsp;Case
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                href="/Pricing"
-                sx={{ color: "black", textDecoration: "none" }}
+                onClick={()=>navigate("/pricing")}
+                sx={{ color: "black", cursor:"pointer",textDecoration: "none" }}
               >
                 Pricing
               </Link>
@@ -177,8 +177,8 @@ const Navbar = () => {
               <Box className="dropdownContentNavItem">
                 <ListItem >
                   <Link
-                    href="/Blog"
-                    sx={{ color: "black", textDecoration: "none" }}
+                   onClick={()=>navigate("/blog")}
+                   sx={{ color: "black", cursor:"pointer",textDecoration: "none" }}
                   >
                     Blog
                   </Link>
@@ -186,8 +186,8 @@ const Navbar = () => {
                 <Divider />
                 <ListItem >
                   <Link
-                    href="/helpCenter"
-                    sx={{ color: "black", textDecoration: "none" }}
+                   onClick={()=>navigate("/helpCenter")}
+                   sx={{ color: "black", cursor:"pointer",textDecoration: "none" }}
                   >
                     Help Center
                   </Link>
@@ -206,8 +206,8 @@ const Navbar = () => {
               <Box className="dropdownContentNavItem">
                 <ListItem >
                   <Link
-                    href="/about"
-                    sx={{ color: "black", textDecoration: "none" }}
+                   onClick={()=>navigate("/about")}
+                   sx={{ color: "black", cursor:"pointer",textDecoration: "none" }}
                   >
                     About Us
                   </Link>
@@ -215,8 +215,8 @@ const Navbar = () => {
                 <Divider />
                 <ListItem >
                   <Link
-                    href="/contact"
-                    sx={{ color: "black", textDecoration: "none" }}
+                    onClick={()=>navigate("/contact")}
+                    sx={{ color: "black", cursor:"pointer",textDecoration: "none" }}
                   >
                     Contact Us
                   </Link>
