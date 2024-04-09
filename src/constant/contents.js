@@ -267,3 +267,31 @@ export const FAQS = [
     accDesc:"No, our system uses the minutes from your billing cycle every time you click “Render” even if this is the same video. If you decide to delete your projects, it will not restore the used credits. "
   }
 ];
+
+
+export const AVATERS_ACTORS={
+ALL:[
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Aimee3.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Jenny4.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Nik2.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Nik2.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Nik2.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Xena1.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Xena1.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Samuel1.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Aimee3.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Jenny4.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Nik2.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Nik2.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Nik2.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Xena1.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Xena1.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Samuel1.png",
+
+],
+SEATED:[
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Seated_Amira.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Seated_Bill.png",
+  "https://d9f35555a8b3e9044c8d-95c21efaab8093d23d4124e599a618ee.ssl.cf5.rackcdn.com/synthesys-v2/AiHumanActorImages/Seated_Samir.png"
+]
+}
