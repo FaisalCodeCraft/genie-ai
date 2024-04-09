@@ -11,12 +11,19 @@ import {
 } from "@mui/material";
 import ButtonComp from "components/Button/Button";
 import { PRICING_PAKAGE } from "constant/contents";
-import React from "react";
+import { UseContext } from "context";
+import React, { useContext } from "react";
 
 const PricingPakage = () => {
+  const { mode } = useContext(UseContext)
   return (
     <Box py={{ md: 10, sm: 6, xs: 6 }} >
-      <Container maxWidth="lg" sx={{ bgcolor: "rgb(236, 237, 237)", py: { md: 8 ,sm:5,xs:3} }} >
+      <Container maxWidth="lg"
+        sx={{
+          bgcolor: mode === "light" ? "rgb(236, 237, 237)"
+            : "rgb(34,34,34)",
+          py: { md: 8, sm: 5, xs: 3 }
+        }} >
         {/* <Box position={"absolute"} right={0} top={0} width={"300px"} zIndex={-1}>
         <img
           width={"100%"}
@@ -29,10 +36,11 @@ const PricingPakage = () => {
           Packages
         </Typography>
 
-        <Grid container spacing={{ md: 6,sm:3,xs:2 }} px={{ md: 3 }} textAlign={"center"}>
+        <Grid container spacing={{ md: 6, sm: 3, xs: 2 }} px={{ md: 3 }} textAlign={"center"}>
           {PRICING_PAKAGE.map((feature, i) => (
             <Grid item md={4} sm={6} xs={12} mt={5} key={i}>
-              <Box bgcolor={"white"}
+              <Box bgcolor={mode === "light" ? "white"
+                : "rgb(34,34,34)"}
                 boxShadow={"0 0 12px 1px lightGray"}
                 p={4}
                 borderRadius={"10px"}
@@ -118,13 +126,13 @@ const PricingPakage = () => {
                   }
 
                 </List>
-                
+
               </Box>
             </Grid>
           ))}
         </Grid>
       </Container>
-    </Box>
+    </Box >
   );
 };
 

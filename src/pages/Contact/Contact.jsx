@@ -1,9 +1,12 @@
-import { Box, Container, FormControl, Grid, OutlinedInput, TextField,  Typography } from '@mui/material'
+import { Box, Container, FormControl, Grid, OutlinedInput, TextField, Typography } from '@mui/material'
+import ButtonComp from 'components/Button/Button'
 import Layout from 'components/layout/Layout'
+import { UseContext } from 'context'
 import MuiPhoneNumber from 'mui-phone-number'
-import React from 'react'
+import React, { useContext } from 'react'
 
 export const Contact = () => {
+    const { mode } = useContext(UseContext)
     return (
         <Layout>
             <Box py={{ md: 10 }} >
@@ -34,10 +37,13 @@ export const Contact = () => {
                     </Typography>
 
                     <Grid container spacing={4}
-                        bgcolor={"rgb(236, 237, 237)"}
+                        bgcolor={mode === "light" ? "rgb(236, 237, 237)"
+                            : "rgb(34,34,34)"}
                         px={{ md: 15 }} py={{ md: 10 }}
                         my={{ md: 5, sm: 4, xs: 3 }}
                         borderRadius={"10px"}
+                        border={mode === "dark" && "2px solid gray"}
+                        boxShadow={mode === "dark" && "0px 0px 8px gray"}
                     >
                         <Grid item md={6}>
                             <FormControl fullWidth variant="outlined">
@@ -48,7 +54,7 @@ export const Contact = () => {
                                     aria-describedby="outlined-weight-helper-text"
                                     sx={{
                                         backgroundColor: 'white',
-                                        boxShadow:"inset 0px 0px 3px lightgray"
+                                        boxShadow: "inset 0px 0px 3px lightgray"
                                     }}
                                 />
                             </FormControl>
@@ -60,7 +66,7 @@ export const Contact = () => {
                                 <OutlinedInput
                                     sx={{
                                         backgroundColor: 'white',
-                                        boxShadow:"inset 0px 0px 3px lightgray"
+                                        boxShadow: "inset 0px 0px 3px lightgray"
                                     }}
                                     id="outlined-adornment-weight"
                                     aria-describedby="outlined-weight-helper-text"
@@ -73,7 +79,7 @@ export const Contact = () => {
                                 <OutlinedInput
                                     sx={{
                                         backgroundColor: 'white',
-                                        boxShadow:"inset 0px 0px 3px lightgray"
+                                        boxShadow: "inset 0px 0px 3px lightgray"
                                     }}
                                     id="outlined-adornment-weight"
                                     aria-describedby="outlined-weight-helper-text"
@@ -81,34 +87,14 @@ export const Contact = () => {
                             </FormControl>
                         </Grid>
                         <Grid item md={6}>
-                            {/*  <FormControl  fullWidth variant='outlined'>
-                                <Select
-                                    displayEmpty
-                                    inputProps={{ 'aria-label': 'Without label' }}
-                                    defaultValue={"Pakistan"}
-                                >
-                                    <MenuItem value="Pakistan" disabled>
-                                        <em>Pakistan</em>
-                                    </MenuItem>
-                                    <MenuItem >France</MenuItem>
-                                    <MenuItem >USA</MenuItem>
-                                    <MenuItem >Germany</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </Grid>
-                        <Grid item md={8}>
-                            <FormControl  fullWidth variant="outlined">
-                                <OutlinedInput
-                                    id="outlined-adornment-weight"
-                                    aria-describedby="outlined-weight-helper-text"
-                                />
-                            </FormControl> */}
-                            <FormControl >
+                           
+                            <FormControl fullWidth>
                                 <label style={{ marginBottom: "10px" }}>Phoner Number</label>
                                 <MuiPhoneNumber
                                     sx={{
+                                        borderRadius:"4px",
                                         backgroundColor: 'white',
-                                        boxShadow:"inset 0px 0px 3px lightgray"
+                                        boxShadow: "inset 0px 0px 3px lightgray"
                                     }}
                                     defaultCountry={'us'} variant='outlined' />
                             </FormControl>
@@ -119,8 +105,9 @@ export const Contact = () => {
                                 <label style={{ marginBottom: "10px" }}>Comments</label>
                                 <TextField
                                     sx={{
+                                        borderRadius:"4px",
                                         backgroundColor: 'white',
-                                        boxShadow:"inset 0px 0px 3px lightgray"
+                                        boxShadow: "inset 0px 0px 3px lightgray"
                                     }}
                                     multiline
                                     minRows={2}
@@ -128,6 +115,12 @@ export const Contact = () => {
                                 />
                             </FormControl>
                         </Grid>
+                        <Box 
+                        mt={{md:6,sm:4,xs:3}}
+                        width={"100px"}
+                         mx={"auto"}>
+                            <ButtonComp title="Submit"/>
+                        </Box>
                     </Grid>
                 </Container>
             </Box>

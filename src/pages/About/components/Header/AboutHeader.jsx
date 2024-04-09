@@ -1,13 +1,18 @@
 import { Box, Container, Typography } from '@mui/material'
-import React from 'react'
+
 
 const AboutHeader = () => {
-  return (
-    <Box position={"relative"}>
-        <Box position={"absolute"}
-                zIndex={-9}
+    
+    return (
+        <Box
+        
+            position={"relative"}
+            zIndex={2}
+        >
+            <Box position={"absolute"}
+                zIndex={-1}
                 width={"100%"}
-                height={{md:"100vh"}}
+                height={{ md: "98vh" }}
             >
                 <img
                     width={"100%"}
@@ -18,7 +23,7 @@ const AboutHeader = () => {
                     src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
             </Box>
 
-            <Container maxWidth="md">
+            <Container maxWidth="md" sx={{ pb: { md: 10 } }}>
                 <Typography sx={{
                     fontSize: { md: "1.5em" },
                     fontWeight: "bold",
@@ -34,21 +39,21 @@ const AboutHeader = () => {
                     px: { md: 15 },
                     textAlign: "center",
                     color: "white",
-                    lineHeight:{md:"65px"}
+                    lineHeight: { md: "65px" }
 
                 }}>Advancing the World with Artificial Intelligence</Typography>
                 <Typography
                     py={{ md: 3 }}
-                    fontSize= { {md: "1.2em"} }
+                    fontSize={{ md: "1.2em" }}
                     textAlign={"center"}
                     color={"white"}
                 >
                     Where enterprises and AI meet at the pinnacle of innovation. We develop state-of-the-art AI to accelerate business growth.
                 </Typography>
-               
+
             </Container>
-    </Box>
-  )
+        </Box>
+    )
 }
 
 export default AboutHeader

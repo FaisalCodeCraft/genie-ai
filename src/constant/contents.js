@@ -157,8 +157,8 @@ export const PRICING_PAKAGE = [
     vidLenght: "Up to 10 Minutes per Video",
     scenes: " Up to 6 Scenes per Video",
     upldVoice: "Voice Uploads",
-    voiceDnld:"Audio Download",
-    btnTitle:"Get Started"
+    voiceDnld: "Audio Download",
+    btnTitle: "Get Started",
   },
   {
     title: "Basic",
@@ -167,9 +167,9 @@ export const PRICING_PAKAGE = [
     duration: "100 Minutes / Month",
     vidLenght: "Up to 39 Minutes per Video",
     scenes: " Up to 36 Scenes per Video",
-    avtrAccss:"Early Access to Latest AI Avatars",
-    avtrScne:"Multi-Avatar Scenes",
-    btnTitle:"Get Started"
+    avtrAccss: "Early Access to Latest AI Avatars",
+    avtrScne: "Multi-Avatar Scenes",
+    btnTitle: "Get Started",
   },
   {
     title: "Let's Talk",
@@ -177,7 +177,7 @@ export const PRICING_PAKAGE = [
     features: "Includes all Pro plan features",
     scenes: " Up to 50 Scenes per Video",
     avtrAccss: "Unlock eligibility for Studio AI Avatar",
-    btnTitle:"Contact Us"
+    btnTitle: "Contact Us",
   },
 ];
 
@@ -208,9 +208,9 @@ export const ADD_SERVICES = [
   // },
 ];
 
-export const LISTS= [
+export const LISTS = [
   {
-    title:"Features",
+    title: "Features",
     l_Item1: " AIl features",
     l_Item2: " AI Avatars",
     l_Item3: " Cartoon Avatars",
@@ -220,21 +220,50 @@ export const LISTS= [
     l_Item7: " Voice Cloning ",
   },
   {
-    title:"About",
+    title: "About",
     l_Item1: " Company",
     l_Item2: " Careers",
     l_Item3: " Blog",
   },
   {
-    title:"Products",
+    title: "Products",
     l_Item1: " Genie platform",
     l_Item2: " Prices",
     l_Item3: " Use Cases",
   },
   {
-    title:"Help",
+    title: "Help",
     l_Item1: "Contact Us",
     l_Item2: " Privacy Policy ",
     l_Item3: " Terms & Conditions",
   },
+];
+
+export const FAQS = [
+  {
+    accSummary: "What pricing model do you have?",
+    accDesc:
+      "Our model is a pre-paid subscription model. Choose a suitable plan, proceed with the payment and the video credits will automatically appear on your account balance. ",
+  },
+  {
+    accSummary:"Is a pay-as-you-go option available?",
+    accDesc:"No, our platform requires an active subscription with a fixed number of minutes, we recommend you start with a plan that includes any number of minutes and top-up minutes at any time when you need it in My Profile. The cost of 1 extra minute is $2."
+  },
+  {
+    accSummary:"If I delete my videos, will I get my minutes back?",
+    accDesc:"No, our system uses the minutes from your billing cycle every time you click “Render” even if this is the same video. If you decide to delete your projects, it will not restore the used credits. "
+  },
+  {
+    accSummary: "What pricing model do you have?",
+    accDesc:
+      "Our model is a pre-paid subscription model. Choose a suitable plan, proceed with the payment and the video credits will automatically appear on your account balance. ",
+  },
+  {
+    accSummary:"Is a pay-as-you-go option available?",
+    accDesc:"No, our platform requires an active subscription with a fixed number of minutes, we recommend you start with a plan that includes any number of minutes and top-up minutes at any time when you need it in My Profile. The cost of 1 extra minute is $2."
+  },
+  {
+    accSummary:"If I delete my videos, will I get my minutes back?",
+    accDesc:"No, our system uses the minutes from your billing cycle every time you click “Render” even if this is the same video. If you decide to delete your projects, it will not restore the used credits. "
+  }
 ];

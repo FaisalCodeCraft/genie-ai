@@ -60,7 +60,7 @@ const UseAvater = () => {
                                             color={"gray"}
                                         >{item.desc}</Typography>
                                         <Button
-                                            onClick={() => navigate("/Dashboard")}
+                                            onClick={() => navigate('/Dashboard/home')}
                                             sx={{
                                                 bgcolor: "blue",
                                                 color: "white",

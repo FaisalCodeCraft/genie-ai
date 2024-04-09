@@ -37,4 +37,7 @@
   .dropdown:hover .dropdownContentNavItem{
     display: block;
   }
+  .dropdown:hover .icon{
+    transform: rotate(-90deg);
+  }
   

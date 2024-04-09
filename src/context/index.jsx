@@ -12,7 +12,7 @@ const ContextProvider = ({ children }) => {
  
     return (
         <UseContext.Provider value={{  mode, setMode, toggleMode }}>
-            <Box bgcolor={mode === "light" ? "white)" : "#212121"}
+            <Box bgcolor={mode === "dark" && "rgb(34,34,34)"}
                 color={mode === "light" ? "black" : "white"}
                 sx={{ transition: "all .7s ease" }}
             >

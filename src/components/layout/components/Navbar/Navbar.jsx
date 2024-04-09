@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import { Divider, Link, Typography } from "@mui/material";
 import "./navbar.css"
-import { AccountCircleOutlined, LoginOutlined, PersonAddOutlined } from "@mui/icons-material";
+import { AccountCircleOutlined, ChevronLeft, LoginOutlined, PersonAddOutlined } from "@mui/icons-material";
 import ToggleMode from "components/ToggleMode/ToggleMode";
 // import { UseContext } from "../../../context";
 // import { COLORS } from "constants/contents/color";
@@ -173,6 +173,10 @@ const Navbar = () => {
                 > */}
                 Resources
                 {/* </Link> */}
+                <ChevronLeft className="icon" sx={{
+                  transform:"rotate(90deg)",
+                  transition:".3s"
+              }}/>
               </ListItem>
               <Box className="dropdownContentNavItem">
                 <ListItem >
@@ -186,7 +190,7 @@ const Navbar = () => {
                 <Divider />
                 <ListItem >
                   <Link
-                   onClick={()=>navigate("/helpCenter")}
+                   onClick={()=>navigate("/help")}
                    sx={{ color: "black", cursor:"pointer",textDecoration: "none" }}
                   >
                     Help Center
@@ -202,6 +206,10 @@ const Navbar = () => {
                 > */}
                 Company
                 {/* </Link> */}
+                <ChevronLeft className="icon" sx={{
+                  transform:"rotate(90deg)",
+                  transition:".3s"
+              }}/>
               </ListItem>
               <Box className="dropdownContentNavItem">
                 <ListItem >

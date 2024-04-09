@@ -1,18 +1,24 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
 import "./pricing.css"
 import ButtonComp from 'components/Button/Button'
+import { UseContext } from 'context'
 
 const PricingCustomAvators = () => {
+    const { mode } = useContext(UseContext)
     return (
-        <Box py={{ md: 10,sm:6,xs:4 }}>
+        <Box py={{ md: 10, sm: 6, xs: 4 }}>
             <Container maxWidth="lg">
-                <Grid container spacing={{md:4,sm:2}} xs={12} 
+                <Grid container spacing={{ md: 4, sm: 2 }} xs={12}
                 >
-                <Grid item md={6}>
+                    <Grid item md={6}>
                         <Box
-                            bgcolor={"rgb(236, 237, 237)"}
-                            px={{md:5,sm:2,xs:2}}
+                            bgcolor={mode === "light" ? "rgb(236, 237, 237)"
+                                : "rgb(34,34,34)"
+                            }
+                            border={mode === "dark" && "2px solid gray"}
+                            boxShadow={mode === "dark" && "0px 0px 8px gray"}
+                            px={{ md: 5, sm: 2, xs: 2 }}
                             py={2}
                             borderRadius={"8px"}
                         >
@@ -25,15 +31,19 @@ const PricingCustomAvators = () => {
                                 Custom Avatar?
                             </Typography>
 
-                            <Grid container spacing={{md:6,sm:10}} pt={3}>
+                            <Grid container spacing={{ md: 6, sm: 10 }} pt={3}>
                                 <Grid item md={6} sm={6} >
-                                    < Box height={"200px"}>
+                                    < Box
+                                        height={"200px"}
+
+                                    >
                                         <img
                                             width={"100%"}
                                             height={"100%"}
                                             style={{
                                                 borderRadius: "8px",
-                                                objectFit:'cover'
+                                                objectFit: 'cover',
+
                                             }}
                                             src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStfmufEoKK2M4Tg2dctXg4x1IerYOoiNJe5Hy5KkxOczGVlQsU"
                                             alt='Avater'
@@ -55,17 +65,23 @@ const PricingCustomAvators = () => {
 
                                     </Typography>
                                 </Grid>
-                                <Grid item md={6} sm={6} mt={{md:0,sm:0,xs:4}}>
-                                    <Box height={"200px"} borderRadius={"10px"}>
+                                <Grid item md={6} sm={6}
+                                    mt={{ md: 0, sm: 0, xs: 4 }}
+
+                                >
+                                    <Box
+                                        height={"200px"}
+                                        borderRadius={"10px"}
+                                    >
                                         <img
                                             width={"100%"}
                                             height={"100%"}
                                             style={{
                                                 borderRadius: "8px",
-                                                objectFit:'cover'
+                                                objectFit: 'cover'
                                             }}
                                             src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQQHn5m61zKBaNWU703e6NL5Ddt0xaq0oTCI8GdgAUCrrikihRv'
-                                           alt=' avater'
+                                            alt=' avater'
                                         />
                                     </Box>
                                     <Typography
@@ -96,25 +112,32 @@ const PricingCustomAvators = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid item md={6} sm={12}  mt={{md:0,sm:0,xs:3}}>
-                        <div className='container' >
+                    <Grid item md={6} sm={12} mt={{ md: 0, sm: 0, xs: 3 }}
+
+
+                    >
+                        <Box
+                            className='container'
+                            border={mode === "dark" && "2px solid gray"}
+                            borderRadius={"10px"}
+                        >
                             <img
                                 width={"100%"}
                                 height={"100%"}
                                 className='image'
                                 style={{
                                     borderRadius: "8px",
-                                    objectFit:"cover"
+                                    objectFit: "cover"
                                 }}
                                 src="https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
                             <Box
                                 position={"absolute"}
                                 top={0}
-                                p={{md:4,sm:3,xs:2}}
+                                p={{ md: 4, sm: 3, xs: 2 }}
                             >
                                 <Typography
                                     color={"white"}
-                                    fontSize={{ md: "2.5em", sm:"2em"}}
+                                    fontSize={{ md: "2.5em", sm: "2em" }}
                                     fontWeight={600}
                                     lineHeight={{ md: "42px" }}
                                 >
@@ -127,17 +150,17 @@ const PricingCustomAvators = () => {
                                     width: { md: "180px", xs: "160px" },
                                     ml: 'auto',
                                     position: "absolute",
-                                    bottom: {md:45,sm:35,xs:10},
-                                    right: {md:45,sm:35,xs:6},
+                                    bottom: { md: 45, sm: 35, xs: 10 },
+                                    right: { md: 45, sm: 35, xs: 6 },
                                 }}
                             >
                                 <ButtonComp title="Learn More" />
                             </Box>
 
-                        </div>
+                        </Box>
 
                     </Grid>
-                  
+
                 </Grid>
             </Container>
         </Box >

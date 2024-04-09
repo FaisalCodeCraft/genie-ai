@@ -1,11 +1,16 @@
-import React from 'react'
-import { Box, Container,  Grid,  Typography } from '@mui/material'
+import React, { useContext } from 'react'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import ButtonComp from 'components/Button/Button'
 import { USECASES_CARD } from 'constant/contents'
+import { UseContext } from 'context'
 
 const UseCaseHeader = () => {
+    const { mode } = useContext(UseContext)
     return (
-        <Box bgcolor={"rgb(236, 237, 237)"} sx={{ p: { md: 6, sm: 4 } }}>
+        <Box bgcolor={mode === "light" ? "rgb(236, 237, 237)"
+            : "rgb(34,34,34)"}
+            sx={{ p: { md: 6, sm: 4 } }}
+        >
             <Container maxWidth="lg" sx={{ py: 10 }}>
                 <Typography
                     sx={{
@@ -43,7 +48,9 @@ const UseCaseHeader = () => {
                                     borderRadius: 1.3,
                                     height: "400px"
                                 }}
-                                bgcolor={"white"}
+                                bgcolor={mode === "light" ? "white" : "rgb(34,34,34)"}
+                                border={mode === "dark" && "2px solid gray"}
+                                boxShadow={mode === "dark" && "0px 0px 8px gray"}
                             >
                                 <img
                                     src={data.imgUrl}
@@ -62,8 +69,12 @@ const UseCaseHeader = () => {
 
                 </Grid>
 
-                <Box py={{ md: 5, sm: 4, xs: 3 }} 
-                    mt={{md:10,sm:5,xs:2}} borderRadius={"8px"} bgcolor={"white"}>
+                <Box
+                    py={{ md: 5, sm: 4, xs: 3 }}
+                    mt={{ md: 10, sm: 5, xs: 2 }}
+                    borderRadius={"8px"}
+                    bgcolor={mode === "light" ? "white" : "rgb(34,34,34)"}
+                >
                     <Typography fontSize={{ md: "2.5em", sm: "1.5em" }}
                         fontWeight={"bold"}
                         textAlign={"center"}

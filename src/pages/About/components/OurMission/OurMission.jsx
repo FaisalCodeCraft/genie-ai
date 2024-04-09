@@ -1,9 +1,15 @@
 import { Box, Container, Typography } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
+import { UseContext } from 'context'
 
 const OurMission = () => {
+    const{mode}=useContext(UseContext)
     return (
-        <Box py={{ md: 10 }}>
+        <Box 
+        py={{ md: 10 }}
+             bgcolor={mode === "light" ? "rgb(236, 237, 237)" 
+        : "rgb(34,34,34)"}
+        >
             <Container maxWidth="md">
                 <Typography sx={{
                     fontSize: { md: "1.4em" },

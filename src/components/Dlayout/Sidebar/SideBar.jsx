@@ -1,34 +1,49 @@
 import * as React from "react";
-// import theme from "styles/theme";
 import List from "@mui/material/List";
-// import ROUTES from "constant/routes/";
 import Drawer from "@mui/material/Drawer";
 import Divider from "@mui/material/Divider";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import SettingsIcon from "@mui/icons-material/Settings";
 import ListItemButton from "@mui/material/ListItemButton";
 import { Delete, Home, Person, VideoCameraBack } from "@mui/icons-material";
-// import { COLORS } from "constant/colors";
+import { useNavigate, useLocation } from 'react-router-dom'
+import { createMuiTheme } from '@mui/material';
+import { ROUTES } from "constant/routes";
 
+let theme = createMuiTheme({
+  MuiList: {
+    styleOverrides: {
+      root: {
+        "&.MuiList-sideBar-menu": {
+          width: 200,
+          minHeight: "100vh",
+        },
+      },
+    },
+  },
+})
 
 export const SideBar = (props) => {
-//   const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
+  const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
 
-//   const { pathname } = useLocation();
+  const { pathname } = useLocation();
+  const isActiveHomeURL = pathname === ROUTES.PAGES.DASHBOARD.HOME;
+  const isActiveVideosURL = pathname === ROUTES.PAGES.DASHBOARD.VIDEOS;
+  const isActiveCreateAvaterURL = pathname === ROUTES.PAGES.DASHBOARD.CREATEAVATER;
+  const isActiveDeletedVideosURL = pathname === ROUTES.PAGES.DASHBOARD.DELETEVIDEOS;
+  const navigate = useNavigate();
 
-//   const navigate = useNavigate();
- 
 
-  
+
   return (
-    <Drawer variant={ "permanent" } {...props}>
-      <List className="MuiList-sideBar-menu" 
-      sx={{bgcolor:"black",height:"100vh",color:"white"}} 
-      
+    <Drawer variant={isSmUp ? "permanent" : "temporary"} {...props}>
+      <List className="MuiList-sideBar-menu"
+        sx={{ bgcolor: "black", height: "100vh", width: 230, color: "white" }}
+
       >
-        <ListItem sx={{ textAlign: "center", my: 4 }}>
+        {/* <ListItem sx={{ textAlign: "center", my: 4 }}>
           <ListItemText>
             <img
               style={{ width: "50px", height: "50px" }}
@@ -36,17 +51,43 @@ export const SideBar = (props) => {
               alt="dashboard-logo"
             />
           </ListItemText>
-        </ListItem>
-        <ListItem  disablePadding sx={{
-          "&:hover":{
-            bgcolor:"blue"
-          }
-        }}>
-          <ListItemButton
-            // onClick={() => navigate(ROUTES.COMMON.DASHBOARD)}
+        </ListItem> */}
+        <ListItem sx={{ textAlign: "center", my: 3 }}>
+          <ListItemText 
+          primaryTypographyProps={{
+            style:{
+              fontSize:"1.5em",
+              fontWeight:800
+            }
+          }}
           >
-            <ListItemIcon>
-            <Home
+            GenieAi.
+          </ListItemText>
+        </ListItem>
+        <ListItem disablePadding
+          sx={{
+            borderRadius: "15px",
+            width: "90%",
+            mx: "auto",
+            "&:hover": {
+              bgcolor: "blue",
+              borderRadius: "15px",
+            }
+          }}>
+          <ListItemButton
+            disableGutters
+            sx={{
+              px: 1,
+              borderRadius: "15px",
+              "&.Mui-selected": {
+                backgroundColor: "blue",
+              }
+            }}
+            selected={isActiveHomeURL}
+            onClick={() => navigate(ROUTES.PAGES.DASHBOARD.HOME)}
+          >
+            <ListItemIcon >
+              <Home
                 sx={{
                   color: "white"
                 }}
@@ -56,87 +97,123 @@ export const SideBar = (props) => {
             <ListItemText>Home</ListItemText>
           </ListItemButton>
         </ListItem>
-        <ListItem  disablePadding sx={{
-          "&:hover":{
-            bgcolor:"blue"
+        <ListItem disablePadding sx={{
+          borderRadius: "15px",
+          width: "90%",
+          mx: "auto",
+          mt: .5,
+          "&:hover": {
+            bgcolor: "blue",
+            borderRadius: "15px",
           }
         }}>
           <ListItemButton
-            // selected={isActiveStudentURL}
-            // onClick={() => navigate(ROUTES.COMMON.STUDENTS)}
+            disableGutters
+            sx={{
+              px: 1,
+              borderRadius: "15px",
+              "&.Mui-selected": {
+                backgroundColor: "blue",
+              }
+            }}
+            selected={isActiveVideosURL}
+            onClick={() => navigate(ROUTES.PAGES.DASHBOARD.VIDEOS)}
           >
             <ListItemIcon>
-             <VideoCameraBack    sx={{
-                  color: "white"
-                }}
-                fontSize="small"/>
+              <VideoCameraBack sx={{
+                color: "white"
+              }}
+                fontSize="small" />
             </ListItemIcon>
             <ListItemText>Videos</ListItemText>
           </ListItemButton>
         </ListItem>
-        <ListItem   disablePadding sx={{
-          "&:hover":{
-            bgcolor:"blue"
+        <ListItem disablePadding sx={{
+          borderRadius: "15px",
+          width: "90%",
+          mx: "auto",
+          mt: .5,
+          "&:hover": {
+            bgcolor: "blue",
+            borderRadius: "15px",
           }
         }}>
           <ListItemButton
-            // selected={isActiveStudentURL}
-            // onClick={() => navigate(ROUTES.COMMON.STUDENTS)}
+            disableGutters
+            sx={{
+              px: 1,
+              borderRadius: "15px",
+              "&.Mui-selected": {
+                backgroundColor: "blue",
+              }
+            }}
+            selected={isActiveCreateAvaterURL}
+            onClick={() => navigate(ROUTES.PAGES.DASHBOARD.CREATEAVATER)}
           >
-            <ListItemIcon>
-           <Person    sx={{
-                  color: "white"
-                }}
-                fontSize="small"/>
+            <ListItemIcon >
+              <Person sx={{
+                color: "white"
+              }}
+                fontSize="small" />
             </ListItemIcon>
-            <ListItemText>Craete Avater</ListItemText>
+            <ListItemText>Create Avater</ListItemText>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding sx={{
-          "&:hover":{
-            bgcolor:"blue"
+          borderRadius: "15px",
+          width: "90%",
+          mx: "auto",
+          mt: .5,
+          "&:hover": {
+            bgcolor: "blue",
+            borderRadius: "15px",
           }
-        }}
-        >
+        }}>
           <ListItemButton
-            // selected={true}
-            // onClick={() => navigate(ROUTES.COMMON.STUDENTS)}
+            disableGutters
+            sx={{
+              px: 1,
+              borderRadius: "15px",
+              "&.Mui-selected": {
+                backgroundColor: "blue",
+              }
+            }}
+            selected={isActiveDeletedVideosURL}
+            onClick={() => navigate(ROUTES.PAGES.DASHBOARD.DELETEVIDEOS)}
           >
             <ListItemIcon>
-             <Delete    sx={{
-                  color: "white"
-                }}
-                fontSize="small"/>
+              <Delete sx={{
+                color: "white"
+              }}
+                fontSize="small" />
             </ListItemIcon>
             <ListItemText>Deleted Videos</ListItemText>
           </ListItemButton>
         </ListItem>
+       
+        <Divider sx={{ mt: 4, backgroundColor: 'white' }} />
         <ListItem disablePadding sx={{
-          "&:hover":{
-            bgcolor:"blue"
+          borderRadius: "15px",
+          width: "90%",
+          mx: "auto",
+          mt: 2,
+          "&:hover": {
+            bgcolor: "blue",
+            borderRadius: "15px",
           }
         }}>
           <ListItemButton
-          // selected={isActiveSettingURL}
-        //   onClick={() => navigate(ROUTES.COMMON.SETTINGS)}
+            disableGutters
+            sx={{
+              px: 2,
+              borderRadius: "15px",
+              "&.Mui-selected": {
+                backgroundColor: "blue",
+              }
+            }}
+            // selected={isActiveDeletedVideosURL}
+            // onClick={() => navigate(ROUTES.PAGES.DASHBOARD.DELETEVIDEOS)}
           >
-            <ListItemIcon>
-              <SettingsIcon
-                sx={{
-                  color: "white"
-                }}
-                fontSize="small"
-              />
-            </ListItemIcon>
-            <ListItemText>Settings</ListItemText>
-          </ListItemButton>
-        </ListItem>
-        <Divider sx={{ mt: 4, backgroundColor: 'white' }} />
-        <ListItem>
-          <ListItemButton
-            // selected={isActiveSign_inURL}
-            // onClick={logout}
-            >
             <ListItemText>
               Logout
             </ListItemText>
