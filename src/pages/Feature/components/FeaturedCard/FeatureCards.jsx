@@ -12,7 +12,7 @@ const FeatureCards = () => {
             zIndex={2}
         >
             <Box position={"absolute"}
-                zIndex={-1}
+                zIndex={1}
                 width={"100%"}
                 height={"75vh"}
             >

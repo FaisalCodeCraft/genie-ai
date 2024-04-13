@@ -150,7 +150,7 @@ const VideoModal = (props) => {
               <Grid container
 
                 sx={{
-                  height: "300px",
+                  height: "340px",
                   overflowY: "scroll",
                   borderRadius: "15px",
                   "::-webkit-scrollbar": {
@@ -181,6 +181,8 @@ const VideoModal = (props) => {
                           backgroundColor: "white",
                           border: "2px solid gray",
                           borderRadius: "50%",
+                          cursor:"pointer"
+
 
                         }}
                         width={"100%"} src={avater} alt={`Avater_${i}`} />

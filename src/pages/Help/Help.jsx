@@ -6,8 +6,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box, Container, Typography } from '@mui/material'
 import { FAQS } from 'constant/contents';
 import ButtonComp from 'components/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Help = () => {
+    const navigate=useNavigate()
     return (
         <Box position={"relative"} >
             <Box
@@ -41,7 +43,7 @@ const Help = () => {
                     GenieAi.
                 </Typography>
 
-                <ButtonComp title="Go to GenieAI" />
+                <ButtonComp title="Go to GenieAI" onClick={()=>navigate("/Dashboard/home")} />
             </Box>
 
             <Box py={{ md: 10 }}>
