@@ -1,8 +1,9 @@
 import { Box, Container, Link, Typography } from '@mui/material'
 import React from 'react'
-import ButtonComp from '../../../../components/Button/Button'
+// import ButtonComp from '../../../../components/Button/Button'
 import { ChevronRight } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
+import ButtonComp from 'components/Button/Button'
 
 const Header = () => {
     const navigate = useNavigate()
